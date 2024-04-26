@@ -32,6 +32,15 @@ public class MateMagica<T, U> {
         boolean escolha = false;
         int opcao;
 
+        System.out.println("""
+                                          _______         __           _______                __
+                                         |   |   |.---.-.|  |_ .-----.|   |   |.---.-..-----.|__|.----..---.-.
+                                         |       ||  _  ||   _||  -__||       ||  _  ||  _  ||  ||  __||  _  |
+                                         |__|_|__||___._||____||_____||__|_|__||___._||___  ||__||____||___._|
+                                                                                      |_____|
+					""");
+        
+
         do {
             System.out.println("""
 					 _______
@@ -341,7 +350,7 @@ public class MateMagica<T, U> {
         Collections.shuffle(questoesRespostas);
 
         ajudaFada = 2;
-
+        System.out.println("-------------------------------------------------------------------------");
         System.out.println("Hora de encarar o primeiro desafio!\n");
 
         for (int i = 0; i <= 2; i++) {
