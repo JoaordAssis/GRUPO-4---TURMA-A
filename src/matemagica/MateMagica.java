@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+
+// Define e pega a questão e sua respectiva resposta de cada Arraylist, ou seja, pareia a pergunta com a questão correta.
 public class MateMagica<T, U> {
 
     static int pontuacao = 600;
@@ -111,7 +113,6 @@ public class MateMagica<T, U> {
     }
 
     static void jogar() {
-        /*
         delay(5);
         System.out.println("\nBem-vindo(a) ao Reino de Matemágica!\n");
         delay(2);
@@ -260,12 +261,10 @@ public class MateMagica<T, U> {
                 "E assim, com determinação em seu coração e a luz da matemática como sua guia, Numeria se prepara para entrar na Terra dos Padrões e enfrentar os desafios que a aguardam.\n"
         );
         delay(2);
-*/
         terraPadroes();
 
     }
 
-    //chamando terra padroes para teste rápido
     
     static void terraPadroes() {
         Scanner input = new Scanner(System.in);
@@ -390,26 +389,29 @@ public class MateMagica<T, U> {
         }
 
     }
-
+     // Introdução a Terra de Equações do Primeiro Grau
     static void terraEquacaoPrimeiroGrau() {
-        System.out.println("Enquanto Númeria avança em direção à próxima terra, ela se depara com uma pequena vila, mas algo parece estranho...");
+        System.out.println("Enquanto Númeria avança em direção à próxima terra, ela se depara com uma pequena vila, mas algo parece estranho...\n");
         delay(1);
 
-        System.out.println("Númeria: Hmm, essa vila está um tanto sombria. Será que alguém pode me ajudar aqui?");
+        System.out.println("Númeria: Hmm, essa vila está um tanto sombria. Será que alguém pode me ajudar aqui?\n");
         delay(1);
 
-        System.out.println("** Barulho de algo se mexendo **");
+        System.out.println("** Barulho de algo se mexendo **\n");
 
-        System.out.println("Elfo Númerix: Quem está aí?! O que você quer aqui na minha vila?");
-        System.out.println("Númeria, cautelosa, responde:");
-        System.out.println("Númeria: Desculpe-me incomodá-lo, senhor Elfo. Sou Númeria, uma aprendiz de Matemágica. Estou em uma missão para recuperar os cristais matemágicos roubados por Ignorantus.");
+        System.out.println("Elfo Númerix: Quem está aí?! O que você quer aqui na minha vila?\n");
+        
+        System.out.println("Númeria, cautelosa, responde:\n");
+        
+        System.out.println("Númeria: Desculpe-me incomodá-lo, senhor Elfo. Sou Númeria, uma aprendiz de Matemágica. Estou em uma missão para recuperar os cristais matemágicos roubados por Ignorantus.\n");
         delay(3);
 
-        System.out.println("Elfo Númerix, desconfiado, cruza os braços e olha fixamente para Númeria.");
+        System.out.println("Elfo Númerix, desconfiado, cruza os braços e olha fixamente para Númeria.\n");
         delay(2);
 
-        System.out.println("Elfo Númerix: Hmpf, Matemágica, hein? Como posso ter certeza de que você não é uma espiã de Ignorantus?");
-        System.out.println("Elfo Númerix: Responda-me uma coisa, então. O que é mais importante para você?");
+        System.out.println("Elfo Númerix: Hmpf, Matemágica, hein? Como posso ter certeza de que você não é uma espiã de Ignorantus?\n");
+        
+        System.out.println("Elfo Númerix: Responda-me uma coisa, então. O que é mais importante para você?\n");
         delay(2);
 
         System.out.println("Númeria: (Pensativa) Bem, deixe-me ver... (1) Restaurar a harmonia em Matemágica. (2) Derrotar Ignorantus. (3) Aprender mais sobre os mistérios da matemática.");
@@ -419,10 +421,10 @@ public class MateMagica<T, U> {
         int resposta = input.nextInt();
 
         switch (resposta) {
-            case 1 -> System.out.println("Númeria: O que mais importa para mim é restaurar a harmonia em Matemágica.");
-            case 2 -> System.out.println("Númeria: O mais importante para mim é derrotar Ignorantus e salvar Matemágica.");
-            case 3 -> System.out.println("Númeria: Eu desejo aprender mais sobre os mistérios da matemática.");
-            default -> System.out.println("Númeria: Desculpe, eu não entendi sua pergunta. Posso tentar responder novamente?");
+            case 1 -> System.out.println("Númeria: O que mais importa para mim é restaurar a harmonia em Matemágica.\n");
+            case 2 -> System.out.println("Númeria: O mais importante para mim é derrotar Ignorantus e salvar Matemágica.\n");
+            case 3 -> System.out.println("Númeria: Eu desejo aprender mais sobre os mistérios da matemática.\n");
+            default -> System.out.println("Númeria: Desculpe, eu não entendi sua pergunta. Posso tentar responder novamente?\n");
         }
         delay(2);
 
@@ -485,10 +487,10 @@ public class MateMagica<T, U> {
 
         System.out.println("Númeria: Muito obrigada, Elfo Númerix! Estou ansiosa para enfrantar os desafios que virão!.\n");
         delay(2);
-
-        // Aqui você pode continuar com o próximo evento da história ou retornar a algum ponto anterior.
     }
 
+    // Função delay é utilizada para dar um tempo entre cada coisa, pode ser aplicada a tudo.
+    // Para facilitar existe uma conversao de valores para nao precisarmos passar o tempo em milissegundos via argumento. assim evitando erros.
     static void delay(int time) {
         time = time * 1000;
         try {
@@ -499,6 +501,7 @@ public class MateMagica<T, U> {
 
     }
 
+    //Função fada é passada a cada pergunta. Serve para dar ajudas ao jogador. Será apenas para cada questao até que esgote (2 vezes por terra)
     static void fada(int ajudaFada) {
         Scanner input = new Scanner(System.in);
         if (ajudaFada > 1) {
