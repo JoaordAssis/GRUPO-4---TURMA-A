@@ -5,12 +5,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
 // Define e pega a questão e sua respectiva resposta de cada Arraylist, ou seja, pareia a pergunta com a questão correta.
 public class MateMagica<T, U> {
 
     static int pontuacao = 600;
     static int ajudaFada;
+    static int ajudaElfo;
+    static int ajudaMago;
 
     private final T first;
     private final U second;
@@ -265,7 +266,6 @@ public class MateMagica<T, U> {
 
     }
 
-    
     static void terraPadroes() {
         Scanner input = new Scanner(System.in);
 
@@ -361,7 +361,7 @@ public class MateMagica<T, U> {
 
             System.out.println(questao);
 
-            fada(ajudaFada);
+            ajudaFada(ajudaFada);
 
             System.out.println("Digite a alternativa:");
             char resp = input.next().charAt(0);
@@ -389,8 +389,12 @@ public class MateMagica<T, U> {
         }
 
     }
-     // Introdução a Terra de Equações do Primeiro Grau
+    // Introdução a Terra de Equações do Primeiro Grau
+
     static void terraEquacaoPrimeiroGrau() {
+
+        ajudaElfo = 2;
+
         System.out.println("Enquanto Númeria avança em direção à próxima terra, ela se depara com uma pequena vila, mas algo parece estranho...\n");
         delay(1);
 
@@ -400,9 +404,9 @@ public class MateMagica<T, U> {
         System.out.println("** Barulho de algo se mexendo **\n");
 
         System.out.println("Elfo Númerix: Quem está aí?! O que você quer aqui na minha vila?\n");
-        
+
         System.out.println("Númeria, cautelosa, responde:\n");
-        
+
         System.out.println("Númeria: Desculpe-me incomodá-lo, senhor Elfo. Sou Númeria, uma aprendiz de Matemágica. Estou em uma missão para recuperar os cristais matemágicos roubados por Ignorantus.\n");
         delay(3);
 
@@ -410,7 +414,7 @@ public class MateMagica<T, U> {
         delay(2);
 
         System.out.println("Elfo Númerix: Hmpf, Matemágica, hein? Como posso ter certeza de que você não é uma espiã de Ignorantus?\n");
-        
+
         System.out.println("Elfo Númerix: Responda-me uma coisa, então. O que é mais importante para você?\n");
         delay(2);
 
@@ -421,39 +425,43 @@ public class MateMagica<T, U> {
         int resposta = input.nextInt();
 
         switch (resposta) {
-            case 1 -> System.out.println("Númeria: O que mais importa para mim é restaurar a harmonia em Matemágica.\n");
-            case 2 -> System.out.println("Númeria: O mais importante para mim é derrotar Ignorantus e salvar Matemágica.\n");
-            case 3 -> System.out.println("Númeria: Eu desejo aprender mais sobre os mistérios da matemática.\n");
-            default -> System.out.println("Númeria: Desculpe, eu não entendi sua pergunta. Posso tentar responder novamente?\n");
+            case 1 ->
+                System.out.println("Númeria: O que mais importa para mim é restaurar a harmonia em Matemágica.\n");
+            case 2 ->
+                System.out.println("Númeria: O mais importante para mim é derrotar Ignorantus e salvar Matemágica.\n");
+            case 3 ->
+                System.out.println("Númeria: Eu desejo aprender mais sobre os mistérios da matemática.\n");
+            default ->
+                System.out.println("Númeria: Desculpe, eu não entendi sua pergunta. Posso tentar responder novamente?\n");
         }
         delay(2);
 
         System.out.println("Elfo Númerix: Hm, parece que você não é uma espiã de Ignorantus afinal.\n");
         delay(1);
-        
+
         System.out.println("Elfo Númerix: Bem, seja como for, a próxima terra que você está prestes a enfrentar é a Terra das Equações do Primeiro Grau.\n");
         delay(3);
 
         System.out.println("Elfo Númerix: Antes de partir, deixe-me adiantar oque vem a seguir.. equações de primeiro grau.\n");
         delay(1);
-        
+
         System.out.println("Elfo Númerix: As equações de primeiro grau são expressões matemáticas que envolvem uma incógnita (geralmente representada por 'x') e podem ser resolvidas para encontrar o valor dessa incógnita.\n");
         delay(3);
 
         System.out.println("Elfo Númerix: Por exemplo, uma equação simples de primeiro grau seria '2x + 3 = 9'. Aqui, o objetivo é encontrar o valor de 'x' que torna a equação verdadeira.\n");
         delay(2);
-        
+
         System.out.println("Elfo Númerix: Isso significa que 2 vezes um número desconhecido somado a 3 será igual a nove.\n");
         delay(1);
-        
+
         System.out.println("Númeria: Como assim? Número desconhecido?\n");
         delay(1);
-        
+
         System.out.println("Elfo Númerix: Isso! Pense comigo. Vamos inverter a equação. 2x é igual a 9 menos 3 (2x = 9 - 3).\n");
         delay(1);
-        
+
         System.out.println("Elfo Númerix: O resultado será 6! E agora para desvendarmos a Icognita, basta dividirmos pelo nosso resultado. Dessa forma:");
-        
+
         System.out.println("""
                            x = 6
                                -
@@ -461,9 +469,9 @@ public class MateMagica<T, U> {
                            
                            6 / 2 = 3
                            \n""");
-        
+
         System.out.println("Elfo Númerix: 2 vezes (2x) o número 3, somado a 3 será igual a 9!");
-        
+
         System.out.println("""
                            
                            2.3 + 3 = 9
@@ -473,15 +481,15 @@ public class MateMagica<T, U> {
                            9 = 9
                            
                            """);
-        
+
         System.out.println("Elfo Númerix: Viu só! Mágico e fácil.\n");
-        
+
         System.out.println("Númeria: WoWWWW! que interessante! Acho que estou preparada para seguir!\n");
         delay(2);
 
         System.out.println("Elfo Númerix: Durante sua jornada na Terra das Equações do Primeiro Grau, você encontrará diversos desafios desse tipo. Lembre-se de usar seu conhecimento matemático para resolvê-los.\n");
         delay(2);
-        
+
         System.out.println("Elfo Númerix: Ah e não esqueça. A qualquer momento você poderá invocar a fada para te dar ajuda!\n");
         delay(3);
 
@@ -502,19 +510,45 @@ public class MateMagica<T, U> {
     }
 
     //Função fada é passada a cada pergunta. Serve para dar ajudas ao jogador. Será apenas para cada questao até que esgote (2 vezes por terra)
-    static void fada(int ajudaFada) {
+    static void ajudaFada(int ajudaF) {
         Scanner input = new Scanner(System.in);
-        if (ajudaFada > 1) {
+        if (ajudaFada <= 3 && ajudaFada > 0) {
             System.out.println("\nAntes de responder, você deseja ajuda da Fada dos Números? Você tem direito a uma ajuda!\n");
             System.out.println("1 - Sim");
             System.out.println("2 - Não");
             int respostaFada;
             do {
                 respostaFada = input.nextInt();
-                switch (respostaFada) {
+                    switch (respostaFada) {
+                        case 1 -> {
+                            System.out.println("explicação do tema");
+                            ajudaFada--;
+                            break;
+                        }
+                        case 2 -> {
+                            break;
+                        }
+                        default -> {
+                            System.out.println("Opção inválida, Digite 1 se deseja ajuda, ou 2 caso não seja necessário.");
+                        }
+                    }
+            } while (respostaFada != 1 && respostaFada != 2);
+        }
+    }
+
+    static void ajudaElfo(int ajudaE) {
+        Scanner input = new Scanner(System.in);
+        if (ajudaE > 1) {
+            System.out.println("\nAntes de responder, você deseja ajuda da Fada dos Números? Você tem direito a uma ajuda!\n");
+            System.out.println("1 - Sim");
+            System.out.println("2 - Não");
+            int respostaElfo;
+            do {
+                respostaElfo = input.nextInt();
+                switch (respostaElfo) {
                     case 1 -> {
                         System.out.println("explicação do tema");
-                        ajudaFada--;
+                        ajudaE--;
                     }
                     case 2 -> {
                     }
@@ -522,7 +556,32 @@ public class MateMagica<T, U> {
                         System.out.println("Opção inválida, Digite 1 se deseja ajuda, ou 2 caso não seja necessário.");
                     }
                 }
-            } while (respostaFada != 1 && respostaFada != 2);
+            } while (respostaElfo != 1 && respostaElfo != 2);
+        }
+
+    }
+
+    static void ajudaMago(int ajudaM) {
+        Scanner input = new Scanner(System.in);
+        if (ajudaM > 1) {
+            System.out.println("\nAntes de responder, você deseja ajuda da Fada dos Números? Você tem direito a uma ajuda!\n");
+            System.out.println("1 - Sim");
+            System.out.println("2 - Não");
+            int respostaMago;
+            do {
+                respostaMago = input.nextInt();
+                switch (respostaMago) {
+                    case 1 -> {
+                        System.out.println("explicação do tema");
+                        ajudaM--;
+                    }
+                    case 2 -> {
+                    }
+                    default -> {
+                        System.out.println("Opção inválida, Digite 1 se deseja ajuda, ou 2 caso não seja necessário.");
+                    }
+                }
+            } while (respostaMago != 1 && respostaMago != 2);
         }
     }
 
