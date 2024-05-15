@@ -354,10 +354,6 @@ public class MateMagica<T, U> {
 
         Collections.shuffle(questoesRespostas);
 
-        
-        System.out.println("-------------------------------------------------------------------------");
-        System.out.println("Hora de encarar o primeiro desafio!\n");
-
         for (int i = 0; i <= 2; i++) {
             MateMagica<String, String> questaoResposta = questoesRespostas.get(i);
             String questao = questaoResposta.getFirst();
@@ -365,7 +361,7 @@ public class MateMagica<T, U> {
 
             System.out.println(questao);
 
-            ajuda();
+            ajuda(quantidadeAjuda, terra);
 
             System.out.println("Digite a alternativa:");
             char resp = input.next().charAt(0);
@@ -373,11 +369,14 @@ public class MateMagica<T, U> {
             char alternativaCorreta = respostaCorreta.charAt(0);
             if (resp == alternativaCorreta) {
                 System.out.println("\n\n\n\nResposta correta!!!\n\n\n\n");
+                delay(2);
                 pontuacao = 200 + pontuacao;
                 System.out.println("Parabéns sua varinha mágica está com: " + pontuacao + " pontos de energia!\n\n\n\n");
+                delay(2);
 
             } else {
                 System.out.println("Resposta incorreta!! Tente novamente :( \n\n");
+                delay(1);
                 System.out.println("Sua varinha mágica está com: " + pontuacao + " pontos de energia\n\n");
             }
         }
@@ -385,13 +384,15 @@ public class MateMagica<T, U> {
         if (pontuacao < 600) {
             System.out.println("\n\n Infelizmente você não atingiu a pontuação mínima para seguir caminho para a proxima terra./n Você atingiu " + pontuacao
                     + " pontos de energia. Que tal reiniciar o percuso e tentar novamente?! \n\n\n");
+                    delay(4);
             terraPadroes();
         } else {
             System.out.println(
                     "\n\n\n WOW! Você foi incrível, se prepare a proxima fase é terra da equacao de primeiro grau, e dizem que as coisas por lá são ainda mais sombrias..\n");
+                    delay(2);
             terraEquacaoPrimeiroGrau();
         }
-
+        input.close();
     }
      // Introdução a Terra de Equações do Primeiro Grau
     static void terraEquacaoPrimeiroGrau() {     
@@ -486,18 +487,22 @@ public class MateMagica<T, U> {
         System.out.println("Elfo Númerix: Durante sua jornada na Terra das Equações do Primeiro Grau, você encontrará diversos desafios desse tipo. Lembre-se de usar seu conhecimento matemático para resolvê-los.\n");
         delay(2);
         
-        System.out.println("Elfo Númerix: Ah e não esqueça. A qualquer momento você poderá invocar a fada para te dar ajuda!\n");
+        System.out.println("Elfo Númerix: Ah e não esqueça. A qualquer momento você poderá invocar um elfo ajudante meu para te dar ajuda!\n");
         delay(3);
 
         System.out.println("Númeria: Muito obrigada, Elfo Númerix! Estou ansiosa para enfrantar os desafios que virão!.\n");
         delay(2);
-        
-      
+
+        System.out.println("Ao chegar na terra de Equações do primerio grau Númeria se depara com o primeiro desafio.");
+        delay(2);
+
+        //inicia array que contem questões da terra de quações do primeiro grau.
         ArrayList<String> questoesEquacaoPrimeiroGrau = new ArrayList<>();
         
         terra = 2;
         quantidadeAjuda = 2;
         
+        //adiciona questões ao array de questões.
         questoesEquacaoPrimeiroGrau.add("""
 				Determine a resposta da equação x + 30 = 40:
   
@@ -543,7 +548,8 @@ public class MateMagica<T, U> {
 				c) 4
 				d) 1
 				e) 8""");
-
+        
+        //inicia array que contém respostas corretas.
         ArrayList<String> respostasEquacaoPrimeiroGrau = new ArrayList<>();
         respostasEquacaoPrimeiroGrau.add("b) 10");
         respostasEquacaoPrimeiroGrau.add("d) 0");
@@ -557,10 +563,6 @@ public class MateMagica<T, U> {
         }
 
         Collections.shuffle(questoesRespostas);
-
-        
-        System.out.println("-------------------------------------------------------------------------");
-        System.out.println("Hora de encarar o segundo desafio!\n");
         
         for (int i = 0; i <= 2; i++) {
             MateMagica<String, String> questaoResposta = questoesRespostas.get(i);
@@ -569,43 +571,46 @@ public class MateMagica<T, U> {
 
             System.out.println(questao);
 
-            ajuda();
+            ajuda(quantidadeAjuda, terra);
 
             System.out.println("Digite a alternativa:");
             char resp = input.next().charAt(0);
 
             char alternativaCorreta = respostaCorreta.charAt(0);
             if (resp == alternativaCorreta) {
-                System.out.println("\n\n\n\nResposta correta!!!\n\n\n\n");
+                System.out.println("\n\n\nResposta correta!!!\n\n\n");
                 pontuacao = 200 + pontuacao;
+                delay(2);
+
                 System.out.println("Parabéns sua varinha mágica está com: " + pontuacao + " pontos de energia!\n\n\n\n");
 
             } else {
-                System.out.println("Resposta incorreta!! Tente novamente :( \n\n");
+                System.out.println("Resposta incorreta!! Vamos ao proxímo desafio. \n\n");
                 System.out.println("Sua varinha mágica está com: " + pontuacao + " pontos de energia\n\n");
+                delay(2);
             }
         }
         
         if (pontuacao < 1200) {
-            System.out.println("\n\n Infelizmente você não atingiu a pontuação mínima para seguir caminho para a proxima terra./n Você atingiu " + pontuacao
+            System.out.println("\n\n Infelizmente você não atingiu a pontuação mínima para seguir caminho para a proxima terra.\n Você atingiu " + pontuacao
                     + " pontos de energia. Que tal reiniciar o percuso e tentar novamente?! \n\n\n");
             terraEquacaoPrimeiroGrau();
         } else {
             System.out.println(
-                    "\n\n\n WOW! Você foi incrível, se prepare a proxima fase é terra da equacao de primeiro grau, e dizem que as coisas por lá são ainda mais sombrias..\n");
+                    "\n\n\n WOW! Você foi incrível, se prepare a proxima fase é terra da equacao de segundo grau.. e dizem que as coisas por lá são ainda mais sombrias..\n");
             terraEquacaoSegundoGrau();
         }
-
+        input.close();
     }
     
     // Introdução a Terra de Equações do Segundo Grau
-    static void terraEquacaoSegundoGrau() 
-    {
+    static void terraEquacaoSegundoGrau(){
     	terra = 3;
     	quantidadeAjuda = 2;
     	
     	Scanner input = new Scanner(System.in);
 
+        // incia array que contém as perguntas para terra de equações do segundo grau.
         ArrayList<String> questoesEquacaoSegundoGrau = new ArrayList<>();
 
         questoesEquacaoSegundoGrau.add("""
@@ -651,7 +656,7 @@ public class MateMagica<T, U> {
         questoesEquacaoSegundoGrau.add("""
 				Escolha qual das alternativas correspondem as letras a, b e c, da equação x² - 7x + 5 = 0:
  
-				a) a=-1, b=7 e c=-8​
+				a) a=-1, b=7 e c=-8
 				b) a=1, b=-7 e c=5
 				c) a=1, b=-2 e c=12
 				d) a=1, b=-3 e c=1
@@ -671,10 +676,6 @@ public class MateMagica<T, U> {
         }
 
         Collections.shuffle(questoesRespostas);
-        
-            
-        System.out.println("-------------------------------------------------------------------------");
-        System.out.println("Hora de encarar o terceiro desafio!\n");
 
         for (int i = 0; i <= 2; i++) {
             MateMagica<String, String> questaoResposta = questoesRespostas.get(i);
@@ -683,7 +684,7 @@ public class MateMagica<T, U> {
 
             System.out.println(questao);
 
-            ajuda();
+            ajuda(quantidadeAjuda, terra);
 
             System.out.println("Digite a alternativa:");
             char resp = input.next().charAt(0);
@@ -709,10 +710,11 @@ public class MateMagica<T, U> {
                     "\n\n\n WOW! Você foi incrível, se prepare a proxima fase é terra da equacao de primeiro grau, e dizem que as coisas por lá são ainda mais sombrias..\n");
             // Função Última Terra "Boss";
         }
+        input.close();
     }
 
-    // Função delay é utilizada para dar um tempo entre cada coisa, pode ser aplicada a tudo.
-    // Para facilitar existe uma conversao de valores para nao precisarmos passar o tempo em milissegundos via argumento. assim evitando erros.
+    /* Função delay é utilizada para dar um tempo entre cada coisa, pode ser aplicada a tudo.
+       Para facilitar existe uma conversao de valores para nao precisarmos passar o tempo em milissegundos via argumento. assim evitando erros. */
     static void delay(int time) {
         time = time * 1000;
         try {
@@ -723,83 +725,128 @@ public class MateMagica<T, U> {
 
     }
 
-    //Função ajuda é passada a cada pergunta. Serve para dar ajudas ao jogador. Será apenas para cada questao até que esgote (2 vezes por terra) 
-    static void ajuda() {
+    // Função ajuda é passada a cada pergunta. Serve para dar ajudas ao jogador. Será apenas para cada questao até que esgote (2 vezes por terra)
+    static int ajuda(int quantidadeAjuda, int terra) {
         Scanner input = new Scanner(System.in);
-        if (quantidadeAjuda  >= 1 && quantidadeAjuda <= 2) {
-        	int resposta;
-        	do {
-            System.out.println("\nAntes de responder, você deseja ajuda da Fada dos Números? Você tem direito a uma ajuda!\n");
-            System.out.println("1 - Sim");
-            System.out.println("2 - Não");
-            
-            resposta = input.nextInt();
-            if(resposta == 1) { 
-                switch (terra) {
-                    case 1 -> {
-                        System.out.println("Ajuda Fada");
-                        explicacaoaFada();
-                        quantidadeAjuda--;
+        if (quantidadeAjuda >= 1 && quantidadeAjuda <= 2) {
+            int resposta;
+            do {
+                System.out.println("\nAntes de responder, você deseja ajuda? Você tem direito a " + quantidadeAjuda + " ajudas!\n");
+                System.out.println("1 - Sim");
+                System.out.println("2 - Não");
+    
+                while (true) { // Loop para garantir entrada válida
+                    if (input.hasNextInt()) {
+                        resposta = input.nextInt();
                         break;
-                    }
-                    case 2 -> {
-                    	System.out.println("Ajuda Elfo");
-                    	explicacaoaElfo();
-                    	 quantidadeAjuda--;
-                         break;
-                    }
-                    case 3 -> {
-                       	 System.out.println("Ajuda Mago");
-                       	explicacaoaMago();
-                    	 quantidadeAjuda--;
-                         break;
+                    } else {
+                        System.out.println("Entrada inválida, digite 1 para Sim ou 2 para Não.");
+                        input.next(); // Descarta a entrada inválida
                     }
                 }
-            }
-            System.out.println("Opção inválida, Digite 1 se deseja ajuda, ou 2 caso não seja necessário.");
-           } while(resposta != 1 && resposta != 2);
+    
+                if (resposta == 1) {
+                    switch (terra) {
+                        case 1 -> {
+                            System.out.println("Com os poderes de sua varinha mágica, você invoca a Fada dos números!");
+                            explicacaoaFada(quantidadeAjuda);
+                            quantidadeAjuda--;
+                        }
+                        case 2 -> {
+                            System.out.println("Com os poderes de sua varinha mágica, você invoca o Elfo Númerix!");
+                            explicacaoaElfo(quantidadeAjuda);
+                            quantidadeAjuda--;
+                        }
+                        case 3 -> {
+                            System.out.println("Com os poderes de sua varinha mágica, você invoca o MateMago!");
+                            explicacaoaMago(quantidadeAjuda);
+                            quantidadeAjuda--;
+                            
+                        }
+                        default -> System.out.println("Terra desconhecida.");
+                    }
+                    
+                } else if (resposta == 2) {
+                    break; // Sai do loop se a resposta for 2
+                } else {
+                    System.out.println("Opção inválida, digite 1 se deseja ajuda, ou 2 caso não seja necessário.");
+                }
+                
+            } while (resposta != 1 && resposta != 2);
         }
+        // input.close(); // Fechar o Scanner após o loop
+        return quantidadeAjuda;
     }
     
     
-    static void explicacaoaFada() { 
-        switch (quantidadeAjuda) {
-        case 2 -> {
-        	System.out.println("Primeira Ajuda Fada");
-        	break;
+    static void explicacaoaFada(int quantidadeAjuda) {
+        if (quantidadeAjuda == 2) {
+            System.out.println("""
+    
+            Fada: "Númeria! Vi que você precisa da minha ajuda! Aqui estão algumas dicas!
+    
+                - Examine se há um padrão consistente de adição ou multiplicação entre os números.
+    
+                - Tente determinar se os números estão aumentando ou diminuindo em incrementos fixos ou se estão seguindo uma progressão geométrica.
+    
+                - Procure por relações simples entre os números que possam indicar uma operação matemática subjacente."
+    
+            E se lembre, você só poderá me chamar mais uma vez nessa terra!
+    
+            """);
+        } else if (quantidadeAjuda == 1) {
+            System.out.println("""
+    
+            Fada: "Aqui estou eu novamente! Vamos a sua ultima ajuda.
+    
+                - Calcule as diferenças entre cada par de números consecutivos para identificar uma sequência numérica subjacente.
+    
+                - Observe se as diferenças entre os números seguem uma progressão constante ou se há um padrão reconhecível.
+    
+                - Considere também calcular as razões entre os números consecutivos para verificar se há uma progressão geométrica."
+                    
+        """);
         }
-        case 1 -> {
-        	System.out.println("Segunda Ajuda Fada");
-        	break;
-        }
-      }
     }
     
+    static void explicacaoaElfo(int quantidadeAjuda) {
+        if (quantidadeAjuda == 2) {
+            System.out.println("""
     
-    static void explicacaoaElfo() {
-        switch (quantidadeAjuda) {
-        case 2 -> {
-        	System.out.println("Primeira Ajuda Elfo");
-        	break;
+            Elfo: "Ha! Númeria! Vi que você precisa da minha ajuda! Aqui estão algumas dicas!
+    
+                - Comece simplificando a equação, movendo os termos para um lado da equação e resolvendo as operações.
+    
+                - Use a propriedade da igualdade para isolar o termo desconhecido (x) em um lado da equação.
+    
+                - Lembre-se de que as operações feitas em um lado da equação devem ser feitas no outro lado também para manter a igualdade."
+    
+            E se lembre, você só poderá me chamar mais uma vez nessa terra!
+    
+            """);
+        } else if (quantidadeAjuda == 1) {
+            System.out.println("""
+    
+            Elfo: "Ha! Númeria! Vi que você precisa da minha ajuda! Aqui estão algumas dicas!
+    
+                - Uma vez que a equação esteja simplificada e o termo desconhecido isolado, aplique as operações necessárias para resolver a equação.
+    
+                - Realize as operações de adição, subtração, multiplicação e divisão conforme necessário para encontrar o valor de x.
+                
+                - Verifique a solução substituindo o valor encontrado de x na equação original e garantindo que ambos os lados da equação sejam iguais."
+    
+    
+            """);
         }
-        case 1 -> {
-        	System.out.println("Segunda Ajuda Elfo");
-        	break;
-        }
-      }
     }
-    
-    
-    static void explicacaoaMago() {
-        switch (quantidadeAjuda) {
-        case 2 -> {
-        	System.out.println("Primeira Ajuda Mago");
-        	break;
-        }
-        case 1 -> {
-        	System.out.println("Segunda Ajuda Mago");
-        	}
+
+    static void explicacaoaMago(int quantidadeAjuda) {
+        if (quantidadeAjuda == 2) {
+            System.out.println("Primeira Ajuda Mago");
+        } else if (quantidadeAjuda == 1) {
+            System.out.println("Segunda Ajuda Mago");
         }
     }
+
 
 }
