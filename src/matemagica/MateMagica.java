@@ -750,7 +750,7 @@ public class MateMagica<T, U> {
 				""");
 
         questoesFinais.add("""
-            Determine o valor de 𝑥 na equação 2𝑥 + 5 = 17:
+            Determine o valor de x na equação 2x + 5 = 17:
 
             a) 6
             b) 7
@@ -761,7 +761,7 @@ public class MateMagica<T, U> {
 				""");
 
         questoesFinais.add("""
-            Resolva a equação 3(x − 4) = 21:
+            Resolva a equação 3(x - 4) = 21:
 
             a) 5
             b) 7
@@ -774,22 +774,22 @@ public class MateMagica<T, U> {
         questoesFinais.add("""
             Determine quais são as raízes da equação x2 - 5x + 6 = 0:
 
-            a)𝑆={2,3}S={2,3}
-            b)𝑆={−2,3}S={−2,3}
-            c)𝑆={1,6}S={1,6}
-            d)𝑆={−1,6}S={−1,6}
-            e)𝑆={1,5}S={1,5}
+            a)s={2,3}S={2,3}
+            b)s={-2,3}S={-2,3}
+            c)s={1,6}S={1,6}
+            d)s={-1,6}S={-1,6}
+            e)s={1,5}S={1,5}
 
 				""");
 
         questoesFinais.add("""
-            Escolha qual das alternativas correspondem aos coeficientes 𝑎 a, 𝑏 b e 𝑐 c da equação 2 𝑥2  −  4𝑥 − 6 = 0
+            Escolha qual das alternativas correspondem aos coeficientes a, b e c da equação 2 x2  -  4x - 6 = 0
 
-            a)𝑎=1,𝑏=2,𝑐=−3a=1,b=2,c=−3
-            b)𝑎=2,𝑏=−4,𝑐=−6a=2,b=−4,c=−6
-            c)𝑎=3,𝑏=−4,𝑐=−2a=3,b=−4,c=−2
-            d)𝑎=2,𝑏=4,𝑐=6a=2,b=4,c=6
-            e)𝑎=1,𝑏=4,𝑐=−6a=1,b=4,c=−6:
+            a=1,b=2,c=-3a=1,b=2,c=-3
+            b=2,b=-4,c=-6a=2,b=-4,c=-6
+            c=3,b=-4,c=-2a=3,b=-4,c=-2
+            d=2,b=4,c=6a=2,b=4,c=6
+            e=1,b=4,c=-6a=1,b=4,c=-6:
 
 
 				""");
@@ -798,8 +798,8 @@ public class MateMagica<T, U> {
         respostasFinal.add("a) 37");
         respostasFinal.add("a) 6");
         respostasFinal.add("e) 13");
-        respostasFinal.add("a) 𝑆 = { 2 , 3 } S={2,3}");
-        respostasFinal.add("b) 𝑎 = 2 , 𝑏 = − 4 , 𝑐 = − 6 a=2,b=−4,c=−6");
+        respostasFinal.add("a) s = { 2 , 3 } S={2,3}");
+        respostasFinal.add("b) b=-4,c=-6a=2,b=-4,c=-6");
         
         List<MateMagica<String, String>> arrayRespostasFinal = new ArrayList<>();
         for (int i = 0; i < questoesFinais.size(); i++) {
