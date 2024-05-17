@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-
+import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
 
 // Define e pega a questão e sua respectiva resposta de cada Arraylist, ou seja, pareia a pergunta com a questão correta.
 public class MateMagica<T, U> {
@@ -13,6 +14,8 @@ public class MateMagica<T, U> {
     static int quantidadeAjuda;
     static int terra;
 
+    
+    
     private final T first;
     private final U second;
 
@@ -32,6 +35,18 @@ public class MateMagica<T, U> {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
+        //System.setOut(new PrintStream(System.out, true, "UTF-8"));
+        try {
+            // Redireciona System.out para usar UTF-8
+            System.setOut(new PrintStream(System.out, true, "UTF-8"));
+
+            // Testando a saída com alguns caracteres especiais
+            System.out.println("Olá, mundo! Привет мир! こんにちは世界!");
+
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        
         boolean escolha = false;
         int opcao;
 
