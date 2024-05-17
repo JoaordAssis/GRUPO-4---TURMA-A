@@ -40,9 +40,6 @@ public class MateMagica<T, U> {
             // Redireciona System.out para usar UTF-8
             System.setOut(new PrintStream(System.out, true, "UTF-8"));
 
-            // Testando a saída com alguns caracteres especiais
-            System.out.println("Olá, mundo! Привет мир! こんにちは世界!");
-
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
@@ -129,6 +126,7 @@ public class MateMagica<T, U> {
     }
 
     static void jogar() {
+        terraPadroes();
         System.out.println("Iniciando em 3 segundos...");
     	 delay(3);
          System.out.println("\nBem-vindo(a) ao Reino de Matemágica!\n");
@@ -370,7 +368,7 @@ public class MateMagica<T, U> {
 
         Collections.shuffle(questoesRespostas);
 
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 3; i++) {
             MateMagica<String, String> questaoResposta = questoesRespostas.get(i);
             String questao = questaoResposta.getFirst();
             String respostaCorreta = questaoResposta.getSecond();
@@ -403,7 +401,7 @@ public class MateMagica<T, U> {
         }
 
 
-        if (pontuacao < 400) {
+        if (pontuacao < 600) {
             System.out.println("\n\nInfelizmente você não atingiu a pontuação mínima para seguir caminho para a proxima terra.\nVocê atingiu " + pontuacao
                     + " pontos de energia. Que tal reiniciar o percuso e tentar novamente?! \n\n\n");
                     delay(4);
@@ -619,7 +617,7 @@ public class MateMagica<T, U> {
             }
         }
         
-        if (pontuacao < 800) {
+        if (pontuacao < 1000) {
             System.out.println("\n\n Infelizmente você não atingiu a pontuação mínima para seguir caminho para a proxima terra.\n Você atingiu " + pontuacao
                     + " pontos de energia. Que tal reiniciar o percuso e tentar novamente?! \n\n\n");
             terraEquacaoPrimeiroGrau();
@@ -824,7 +822,7 @@ public class MateMagica<T, U> {
             }
         }
         
-        if (pontuacao < 1000) {
+        if (pontuacao < 1200) {
             System.out.println("\n\n Infelizmente você não atingiu a pontuação mínima para seguir caminho para a próxima terra.\n Você atingiu " + pontuacao
                     + " pontos de energia. Que tal reiniciar o percurso e tentar novamente?! \n\n\n");
             terraEquacaoSegundoGrau();
@@ -1019,21 +1017,22 @@ public class MateMagica<T, U> {
                 }
     
                 if (resposta == 1) {
-                    quantidadeAjuda--;
+                    
                     switch (terra) {
                         case 1 -> {
                             System.out.println("Com os poderes de sua varinha mágica, você invoca a Fada dos números!");
                             explicacaoaFada(quantidadeAjuda);
-                            
+                            quantidadeAjuda--;
                         }
                         case 2 -> {
                             System.out.println("Com os poderes de sua varinha mágica, você invoca o Elfo Númerix!");
                             explicacaoaElfo(quantidadeAjuda);
+                            quantidadeAjuda--;
                         }
                         case 3 -> {
                             System.out.println("Com os poderes de sua varinha mágica, você invoca o MateMago!");
                             explicacaoaMago(quantidadeAjuda);
-                            
+                            quantidadeAjuda--;
                         }
                         default -> System.out.println("Terra desconhecida.");
                     }
