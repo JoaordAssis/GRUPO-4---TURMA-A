@@ -126,7 +126,6 @@ public class MateMagica<T, U> {
     }
 
     static void jogar() {
-        terraPadroes();
         System.out.println("Iniciando em 3 segundos...");
     	 delay(3);
          System.out.println("\nBem-vindo(a) ao Reino de Matemágica!\n");
