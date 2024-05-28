@@ -116,26 +116,26 @@ public class MateMagica<T, U> {
     static void jogar() {
         System.out.println("Iniciando em 3 segundos...");
     	 delay(3);
-         System.out.println("\nBem-vindo(a) ao Reino de Matemágica!\n");
+         System.out.println("Bem-vindo(a) ao Reino de Matemágica!");
          delay(2);
          System.out.println(
                  "No silêncio da noite, Numeria dormia tranquilamente em seu pequeno chalé na Vila dos Números.\nSubitamente, um estranho breu tomou conta do lugar, perturbando seu sono sereno. Ela acorda sobressaltada, o coração disparado diante da escuridão que agora envolvia sua cidade.\n");
          delay(2);
          System.out.println(
-                 "Mãe de Numeria: —Numeria, acorde!!");
+                 "Mãe de Numeria: —Numeria, acorde!!\n");
          delay(2);
          System.out.println(
                  "Numeria: —Mãe? O que está acontecendo? Por que está tudo tão escuro?\n");
          delay(2);
          System.out.println(
-                 "Mãe de Numeria: —Não sei, minha filha. Parece que algo terrível aconteceu.\nEscute, os magos e sábios matemágicos estão convocando uma reunião na praça central.\n");
+                 "Mãe de Numeria: —Não sei, minha filha. Parece que algo terrível aconteceu.\nEscute, os magos e sábios matemágicos estão convocando uma reunião na praça central\n");
          delay(2);
          System.out.println(
-                 "Intrigada e determinada a descobrir a causa da escuridão, Numeria se levanta rapidamente.\n\nGuiada pela preocupação e coragem, ela se dirige à praça, onde os magos e sábios estão reunidos, discutindo em murmúrios preocupados.\n");
+                 "Intrigada e determinada a descobrir a causa da escuridão, Numeria se levanta rapidamente.\nGuiada pela preocupação e coragem, ela se dirige à praça, onde os magos e sábios estão reunidos, discutindo em murmúrios preocupados.\n");
          delay(2);
 
          System.out.println(
-                 "\nGrande Mago: O reino de Matemágica está em perigo, meus amigos. Ignorantus, o vilão das sombras, invadiu nossas terras e roubou os preciosos cristais matemágicos!\n"
+                 "Grande Mago: O reino de Matemágica está em perigo, meus amigos. Ignorantus, o vilão das sombras, invadiu nossas terras e roubou os preciosos cristais matemágicos!\n"
          );
          delay(2);
 
@@ -150,7 +150,7 @@ public class MateMagica<T, U> {
          delay(2);
 
          System.out.println(
-                 "Grande Sábio: \"Numeria, você é nossa única esperança. Você tem o poder e a coragem necessários para enfrentar Ignorantus e recuperar os cristais. Você é a escolhida.\"\n"
+                 "Grande Sábio: Numeria, você é nossa única esperança. Você tem o poder e a coragem necessários para enfrentar Ignorantus e recuperar os cristais. Você é a escolhida.\n"
          );
          delay(2);
 
@@ -160,77 +160,77 @@ public class MateMagica<T, U> {
 
          delay(2);
          System.out.println(
-                 "Numeria: \"Eu irei! Não permitirei que a escuridão reine sobre nosso reino. Irei trazer de volta a luz e os cristais matemágicos!\"\n"
+                 "Numeria: Eu irei! Não permitirei que a escuridão reine sobre nosso reino. Irei trazer de volta a luz e os cristais matemágicos!\n"
          );
 
          delay(4);
          System.out.println(
-                 "Ao sair da praça central, Numeria sente o peso da responsabilidade sobre seus ombros, mas também uma determinação inabalável em seu coração\nEla sabe que o caminho à frente será árduo, mas está determinada a enfrentar todos os desafios.\n"
+                 "Ao sair da praça central, Numeria sente o peso da responsabilidade sobre seus ombros, mas também uma determinação inabalável em seu coração.\nEla sabe que o caminho à frente será árduo, mas está determinada a enfrentar todos os desafios.\n"
          );
 
          delay(2);
          System.out.println(
-                 "Antes de partir Númeria tem uma conversa com o Sábio calculador.."
+                 "Antes de partir Númeria tem uma conversa com o Sábio calculador..\n"
          );
          delay(2);
 
          System.out.println(
-                 "Sábio Calculador: \"Numeria, antes de embarcar nesta jornada, é crucial compreender a importância dos padrões em nossa busca pelos cristais matemágicos. Os padrões são como trilhas deixadas pelas estrelas no céu noturno, revelando segredos ocultos e guias para nosso entendimento.\"\n"
+                 "Sábio Calculador: Numeria, antes de embarcar nesta jornada, é crucial compreender a importância dos padrões em nossa busca pelos cristais matemágicos. Os padrões são como trilhas deixadas pelas estrelas no céu noturno, revelando segredos ocultos e guias para nosso entendimento.\n"
          );
          delay(2);
 
          System.out.println(
-                 "Numeria: \"Padrões? Como assim, sábio Calculador?\"\n"
+                 "Numeria: Padrões? Como assim, sábio Calculador?\n"
          );
          delay(2);
 
          System.out.println(
-                 "Sábio Calculador: \"Os padrões são como as melodias que tecem a sinfonia da matemática. Eles podem ser encontrados nas mais simples tabuadas de multiplicação até nas complexas sequências numéricas que permeiam nosso universo. Permita-me mostrar.\"\n"
+                 "Sábio Calculador: Os padrões são como as melodias que tecem a sinfonia da matemática. Eles podem ser encontrados nas mais simples tabuadas de multiplicação até nas complexas sequências numéricas que permeiam nosso universo. Permita-me mostrar.\n"
          );
          delay(2);
 
          System.out.println(
-                 "Sábio Calculador: \"Observe, Numeria. Veja como os números se alinham, criando padrões sutis e fascinantes.\"\n"
+                 "Sábio Calculador: Observe, Numeria. Veja como os números se alinham, criando padrões sutis e fascinantes.\n"
          );
          delay(2);
 
          System.out.println(
-                 "Sábio Calculador: \"Veja aqui, o padrão I. Cada linha é formada somando o número da linha anterior com o mesmo valor. Um padrão simples, mas fundamental.\"\n"
+                 "Sábio Calculador: Veja aqui, o padrão I. Cada linha é formada somando o número da linha anterior com o mesmo valor. Um padrão simples, mas fundamental.\n"
          );
          delay(2);
 
          System.out.println(
-                 "Numeria: \"Incrível! Nunca tinha percebido isso antes.\"\n"
+                 "Numeria: Incrível! Nunca tinha percebido isso antes.\n"
          );
          delay(2);
 
          System.out.println(
-                 "Sábio Calculador: \"E isso é apenas o começo. Veja o padrão II. Aqui, a soma das células em cada coluna sempre resulta no mesmo valor, revelando uma harmonia matemática oculta.\"\n"
+                 "Sábio Calculador: E isso é apenas o começo. Veja o padrão II. Aqui, a soma das células em cada coluna sempre resulta no mesmo valor, revelando uma harmonia matemática oculta.\n"
          );
          delay(2);
 
          System.out.println(
-                 "Numeria: \"É como se os números dançassem em um padrão.\"\n"
+                 "Numeria: É como se os números dançassem em um padrão.\n"
          );
          delay(2);
 
          System.out.println(
-                 "Sábio Calculador: \"Precisamente, Numeria. E há mais. Os padrões III e IV revelam relações entre as células e até mesmo propriedades dos números. Os padrões estão em toda parte, esperando para serem descobertos.\"\n"
+                 "Sábio Calculador: Precisamente, Numeria. E há mais. Os padrões III e IV revelam relações entre as células e até mesmo propriedades dos números. Os padrões estão em toda parte, esperando para serem descobertos.\n"
          );
          delay(2);
 
          System.out.println(
-                 "Numeria: \"Eu entendo. Os padrões são como chaves que abrem portas para o entendimento matemático.\"\n"
+                 "Numeria: Eu entendo. Os padrões são como chaves que abrem portas para o entendimento matemático.\n"
          );
          delay(2);
 
          System.out.println(
-                 "Sábio Calculador: \"Exatamente, Numeria. E ao compreender esses padrões, você estará armada com uma ferramenta poderosa em sua busca pelos cristais matemágicos. Que esta breve lição sobre padrões ilumine seu caminho, minha jovem.\"\n"
+                 "Sábio Calculador: Exatamente, Numeria. E ao compreender esses padrões, você estará armada com uma ferramenta poderosa em sua busca pelos cristais matemágicos. Que esta breve lição sobre padrões ilumine seu caminho, minha jovem.\n"
          );
          delay(2);
 
          System.out.println(
-                 "Numeria: \"Obrigada, sábio Calculador. Com este conhecimento, estou pronta para enfrentar qualquer desafio que surgir em meu caminho.\"\n"
+                 "Numeria: Obrigada, sábio Calculador. Com este conhecimento, estou pronta para enfrentar qualquer desafio que surgir em meu caminho.\n"
          );
          delay(2);
 
@@ -245,7 +245,7 @@ public class MateMagica<T, U> {
          delay(2);
 
          System.out.println(
-                 "Numeria: \"Cheguei à Terra dos Padrões. Aqui é onde devo provar minha habilidade e conhecimento para recarregar a energia de minha varinha mágica.\"\n"
+                 "Numeria: Cheguei à Terra dos Padrões. Aqui é onde devo provar minha habilidade e conhecimento para recarregar a energia de minha varinha mágica.\n"
          );
          delay(2);
 
@@ -255,7 +255,7 @@ public class MateMagica<T, U> {
          delay(2);
 
          System.out.println(
-                 "Numeria:Estou pronta para enfrentar qualquer desafio que a Terra dos Padrões possa oferecer. Meu conhecimento será minha arma e minha varinha mágica, minha aliada.\n"
+                 "Numeria:Estou pronta para enfrentar qualquer desafio que a Terra dos Padrões possa oferecer. Meu conhecimento será minha arma e minha varinha mágica, minha aliada\n"
          );
          delay(2);
 
@@ -355,7 +355,7 @@ public class MateMagica<T, U> {
 
         Collections.shuffle(questoesRespostas);
 
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 3; i++) {
             MateMagica<String, String> questaoResposta = questoesRespostas.get(i);
             String questao = questaoResposta.getFirst();
             String respostaCorreta = questaoResposta.getSecond();
@@ -373,15 +373,20 @@ public class MateMagica<T, U> {
 
             char alternativaCorreta = respostaCorreta.charAt(0);
             if (resp == alternativaCorreta) {
-                System.out.println("\n\n\n\nResposta correta!!!\n\n\n\n");
+
+                System.out.println("\n\n\n\n Resposta correta!!! \n\n\n\n");
                 delay(3);
+
                 pontuacao = 200 + pontuacao;
-                System.out.println("Parabéns sua varinha mágica está com: " + pontuacao + " pontos de energia!\n\n\n\n");
+
+                System.out.println("Parabéns sua varinha mágica está com: " + pontuacao + " pontos de energia!\n\n");
                 delay(3);
 
             } else {
-                System.out.println("Resposta incorreta!! Tente novamente :( \n\n");
+
+                System.out.println("Resposta incorreta!! Tente novamente :( \n");
                 delay(2);
+
                 System.out.println("Sua varinha mágica está com: " + pontuacao + " pontos de energia\n\n");
                 delay(3);
             }
@@ -389,13 +394,13 @@ public class MateMagica<T, U> {
 
 
         if (pontuacao < 400) {
-            System.out.println("\n\nInfelizmente você não atingiu a pontuação mínima para seguir caminho para a proxima terra.\nVocê atingiu " + pontuacao
-                    + " pontos de energia. Que tal reiniciar o percuso e tentar novamente?! \n\n\n");
+            System.out.println("Infelizmente você não atingiu a pontuação mínima para seguir caminho para a proxima terra.\nVocê atingiu " + pontuacao
+                    + " pontos de energia. Que tal reiniciar o percuso e tentar novamente?! \n\n");
                     delay(4);
             terraPadroes();
         } else {
             System.out.println(
-                    "\n\n\n WOW! Você foi incrível, se prepare a proxima fase é terra da equacao de primeiro grau, e dizem que as coisas por lá são ainda mais sombrias..\n");
+                    "\n\nWOW! Você foi incrível, se prepare a proxima fase é terra da equacao de primeiro grau, e dizem que as coisas por lá são ainda mais sombrias..\n");
                     delay(2);
             terraEquacaoPrimeiroGrau();
         }
@@ -405,27 +410,27 @@ public class MateMagica<T, U> {
     
      // Introdução a Terra de Equações do Primeiro Grau
     static void terraEquacaoPrimeiroGrau() {     
-        System.out.println("Enquanto Númeria avança em direção à próxima terra, ela se depara com uma pequena vila, mas algo parece estranho...\n");
+        System.out.println("Enquanto Númeria avança em direção à próxima terra, ela se depara com uma pequena vila, mas algo parece estranho...");
         delay(1);
 
-        System.out.println("Númeria: Hmm, essa vila está um tanto sombria. Será que alguém pode me ajudar aqui?\n");
+        System.out.println("Númeria: Hmm, essa vila está um tanto sombria. Será que alguém pode me ajudar aqui?");
         delay(1);
 
-        System.out.println("** Barulho de algo se mexendo **\n");
+        System.out.println("** Barulho de algo se mexendo **");
         delay(1);
-        System.out.println("Elfo Númerix: Quem está aí?! O que você quer aqui na minha vila?\n");
+        System.out.println("Elfo Númerix: Quem está aí?! O que você quer aqui na minha vila?");
         delay(1);
-        System.out.println("Númeria, cautelosa, responde:\n");
+        System.out.println("Númeria, cautelosa, responde:");
         delay(1);
-        System.out.println("Númeria: Desculpe-me incomodá-lo, senhor Elfo. Sou Númeria, uma aprendiz de Matemágica. Estou em uma missão para recuperar os cristais matemágicos roubados por Ignorantus.\n");
+        System.out.println("Númeria: Desculpe-me incomodá-lo, senhor Elfo. Sou Númeria, uma aprendiz de Matemágica. Estou em uma missão para recuperar os cristais matemágicos roubados por Ignorantus.");
         delay(3);
 
-        System.out.println("Elfo Númerix, desconfiado, cruza os braços e olha fixamente para Númeria.\n");
+        System.out.println("Elfo Númerix, desconfiado, cruza os braços e olha fixamente para Númeria.");
         delay(2);
 
-        System.out.println("Elfo Númerix: Hmpf, Matemágica, hein? Como posso ter certeza de que você não é uma espiã de Ignorantus?\n");
+        System.out.println("Elfo Númerix: Hmpf, Matemágica, hein? Como posso ter certeza de que você não é uma espiã de Ignorantus?");
         delay(1);
-        System.out.println("Elfo Númerix: Responda-me uma coisa, então. O que é mais importante para você?\n");
+        System.out.println("Elfo Númerix: Responda-me uma coisa, então. O que é mais importante para você?");
         delay(2);
 
         System.out.println("Númeria: (Pensativa) Bem, deixe-me ver... (1) Restaurar a harmonia em Matemágica. (2) Derrotar Ignorantus. (3) Aprender mais sobre os mistérios da matemática.");
@@ -435,29 +440,29 @@ public class MateMagica<T, U> {
         int resposta = input.nextInt();
 
         switch (resposta) {
-            case 1 -> System.out.println("Númeria: O que mais importa para mim é restaurar a harmonia em Matemágica.\n");
-            case 2 -> System.out.println("Númeria: O mais importante para mim é derrotar Ignorantus e salvar Matemágica.\n");
-            case 3 -> System.out.println("Númeria: Eu desejo aprender mais sobre os mistérios da matemática.\n");
-            default -> System.out.println("Númeria: Desculpe, eu não entendi sua pergunta. Posso tentar responder novamente?\n");
+            case 1 -> System.out.println("Númeria: O que mais importa para mim é restaurar a harmonia em Matemágica.");
+            case 2 -> System.out.println("Númeria: O mais importante para mim é derrotar Ignorantus e salvar Matemágica.");
+            case 3 -> System.out.println("Númeria: Eu desejo aprender mais sobre os mistérios da matemática.");
+            default -> System.out.println("Númeria: Desculpe, eu não entendi sua pergunta. Posso tentar responder novamente?");
         }
         delay(2);
 
-        System.out.println("Elfo Númerix: Hm, parece que você não é uma espiã de Ignorantus afinal.\n");
+        System.out.println("Elfo Númerix: Hm, parece que você não é uma espiã de Ignorantus afinal.");
         delay(1);
         
-        System.out.println("Elfo Númerix: Bem, seja como for, a próxima terra que você está prestes a enfrentar é a Terra das Equações do Primeiro Grau.\n");
+        System.out.println("Elfo Númerix: Bem, seja como for, a próxima terra que você está prestes a enfrentar é a Terra das Equações do Primeiro Grau.");
         delay(3);
 
-        System.out.println("Elfo Númerix: Antes de partir, deixe-me adiantar oque vem a seguir.. equações de primeiro grau.\n");
+        System.out.println("Elfo Númerix: Antes de partir, deixe-me adiantar oque vem a seguir.. equações de primeiro grau.");
         delay(1);
         
-        System.out.println("Elfo Númerix: As equações de primeiro grau são expressões matemáticas que envolvem uma incógnita (geralmente representada por 'x') e podem ser resolvidas para encontrar o valor dessa incógnita.\n");
+        System.out.println("Elfo Númerix: As equações de primeiro grau são expressões matemáticas que envolvem uma incógnita (geralmente representada por 'x') e podem ser resolvidas para encontrar o valor dessa incógnita.");
         delay(3);
 
-        System.out.println("Elfo Númerix: Por exemplo, uma equação simples de primeiro grau seria '2x + 3 = 9'. Aqui, o objetivo é encontrar o valor de 'x' que torna a equação verdadeira.\n");
+        System.out.println("Elfo Númerix: Por exemplo, uma equação simples de primeiro grau seria '2x + 3 = 9'. Aqui, o objetivo é encontrar o valor de 'x' que torna a equação verdadeira.");
         delay(2);
         
-        System.out.println("Elfo Númerix: Isso significa que 2 vezes um número desconhecido somado a 3 será igual a nove.\n");
+        System.out.println("Elfo Númerix: Isso significa que 2 vezes um número desconhecido somado a 3 será igual a nove.");
         delay(1);
         
         System.out.println("Númeria: Como assim? Número desconhecido?\n");
@@ -809,7 +814,7 @@ public class MateMagica<T, U> {
             }
         }
         
-        if (pontuacao < 1000) {
+        if (pontuacao < 1200) {
             System.out.println("\n\n Infelizmente você não atingiu a pontuação mínima para seguir caminho para a próxima terra.\n Você atingiu " + pontuacao
                     + " pontos de energia. Que tal reiniciar o percurso e tentar novamente?! \n\n\n");
             terraEquacaoSegundoGrau();
@@ -1106,10 +1111,50 @@ public class MateMagica<T, U> {
     }
 
     static void fimJogo(){
-        System.out.println("FIM!");
-        //em breve será implementada a história final do jogo.
+        System.out.println("Com determinação e habilidade, Numeria enfrentou todos os desafios que se interpuseram em seu caminho.");
+        delay(3);
+        System.out.println("Cada desafio superado fortalecia sua confiança e seu vínculo com a magia da matemática.");
+        delay(3);
+        System.out.println("Com a ajuda dos habitantes de Matemágica e seu conhecimento em matemática, ela superou obstáculos aparentemente impossíveis.");
+        delay(3);
+        System.out.println("Lutando lado a lado com os sábios e magos, ela provou ser uma aliada valorosa e uma líder destemida.");
+        delay(3);
+        System.out.println("Finalmente, diante do poderoso Ignorantus, Numeria provou ser mais do que uma mera aprendiz.");
+        delay(3);
+        System.out.println("Com sua varinha mágica em mãos e a luz da matemática guiando seu caminho, ela enfrentou Ignorantus em uma batalha épica.");
+        delay(3);
+        System.out.println("Os cristais matemágicos brilhavam intensamente ao seu redor, emitindo uma luz que desafiava as trevas que tentavam envolvê-los.");
+        delay(4);
+        System.out.println("A cada feitiço lançado, Numeria canalizava não apenas sua magia, mas também sua determinação e esperança.");
+        delay(4);
+        System.out.println("Com um golpe final certeiro, Ignorantus foi derrotado, e os cristais matemágicos foram devolvidos ao seu lugar de direito.");
+        delay(4);
+        System.out.println("A luz voltou a brilhar sobre Matemágica, dissipando a escuridão que uma vez a envolveu.");
+        delay(4);
+        System.out.println("Numeria tornou-se uma verdadeira heroína, celebrada por todos os habitantes do reino.");
+        delay(4);
+        System.out.println("Seu nome ecoava pelos corredores do castelo e pelas ruas da vila, como um símbolo de esperança e coragem.");
+        delay(4);
+        System.out.println("E assim, com a harmonia restaurada e a paz reinando mais uma vez, Numeria pode finalmente descansar, sabendo que sua coragem e determinação salvaram seu amado reino.");
+        delay(5);
+        System.out.println("Mas sua jornada não termina aqui. Numeria permanece como guardiã dos segredos da matemática, pronta para enfrentar qualquer desafio que o futuro possa trazer.");
+        delay(5);
+        System.out.println("Seu legado vive não apenas nos livros de história, mas nos corações daqueles que ela salvou e inspirou.");
+        delay(5);
+        System.out.println("E assim, Matemágica floresce mais uma vez, banhada pela luz da coragem e do conhecimento, graças à bravura e à determinação de Numeria, a Grande Matemaga.");
+        delay(6);
 
-        System.out.println("Este jogo está 90% pronto! -- breve atualizações. Espero que tenha gostado!");
+        System.out.println("Obrigado por jogar!");
+
+        System.out.println("""
+
+            _______  ______  ______  _______   _______  _______  _____   _______
+            |       ||   __ |   __  |_     _| |      __||   _   ||      |       |
+            |   -   ||   __ <|      < _|   |_ |    |  ||       ||  --  ||   -   |
+            |_______||______/|___|__||_______||_______||___|___||_____/ |_______|
+            
+            
+                """);
 
     }
 
