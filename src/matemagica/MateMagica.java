@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-
+import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
 
 // Define e pega a questão e sua respectiva resposta de cada Arraylist, ou seja, pareia a pergunta com a questão correta.
 public class MateMagica<T, U> {
@@ -13,6 +14,8 @@ public class MateMagica<T, U> {
     static int quantidadeAjuda;
     static int terra;
 
+    
+    
     private final T first;
     private final U second;
 
@@ -32,6 +35,15 @@ public class MateMagica<T, U> {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
+        //System.setOut(new PrintStream(System.out, true, "UTF-8"));
+        try {
+            // Redireciona System.out para usar UTF-8
+            System.setOut(new PrintStream(System.out, true, "UTF-8"));
+
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        
         boolean escolha = false;
         int opcao;
 
@@ -393,9 +405,9 @@ public class MateMagica<T, U> {
         }
 
 
-        if (pontuacao < 400) {
-            System.out.println("Infelizmente você não atingiu a pontuação mínima para seguir caminho para a proxima terra.\nVocê atingiu " + pontuacao
-                    + " pontos de energia. Que tal reiniciar o percuso e tentar novamente?! \n\n");
+        if (pontuacao < 600) {
+            System.out.println("\n\nInfelizmente você não atingiu a pontuação mínima para seguir caminho para a proxima terra.\nVocê atingiu " + pontuacao
+                    + " pontos de energia. Que tal reiniciar o percuso e tentar novamente?! \n\n\n");
                     delay(4);
             terraPadroes();
         } else {
@@ -578,7 +590,7 @@ public class MateMagica<T, U> {
 
         Collections.shuffle(arrayRespostasEquacaoPrimeiroGrau);
         
-        for (int i = 0; i <= 2; i++) {
+        for (int i = 0; i <= 3; i++) {
             MateMagica<String, String> arrayRespostaEquacaoPrimeiroGrau = arrayRespostasEquacaoPrimeiroGrau.get(i);
             String questao = arrayRespostaEquacaoPrimeiroGrau.getFirst();
             String respostaCorreta = arrayRespostaEquacaoPrimeiroGrau.getSecond();
@@ -609,7 +621,7 @@ public class MateMagica<T, U> {
             }
         }
         
-        if (pontuacao < 800) {
+        if (pontuacao < 1000) {
             System.out.println("\n\n Infelizmente você não atingiu a pontuação mínima para seguir caminho para a proxima terra.\n Você atingiu " + pontuacao
                     + " pontos de energia. Que tal reiniciar o percuso e tentar novamente?! \n\n\n");
             terraEquacaoPrimeiroGrau();
@@ -785,7 +797,7 @@ public class MateMagica<T, U> {
 
         Collections.shuffle(arrayRespostasEquacaoSegundoGrau);
 
-        for (int i = 0; i <= 2; i++) {
+        for (int i = 0; i <= 3; i++) {
             MateMagica<String, String> arrayRespostaEquacaoSegundoGrau = arrayRespostasEquacaoSegundoGrau.get(i);
             String questao = arrayRespostaEquacaoSegundoGrau.getFirst();
             String respostaCorreta = arrayRespostaEquacaoSegundoGrau.getSecond();
@@ -1009,21 +1021,22 @@ public class MateMagica<T, U> {
                 }
     
                 if (resposta == 1) {
-                    quantidadeAjuda--;
+                    
                     switch (terra) {
                         case 1 -> {
                             System.out.println("Com os poderes de sua varinha mágica, você invoca a Fada dos números!");
                             explicacaoaFada(quantidadeAjuda);
-                            
+                            quantidadeAjuda--;
                         }
                         case 2 -> {
                             System.out.println("Com os poderes de sua varinha mágica, você invoca o Elfo Númerix!");
                             explicacaoaElfo(quantidadeAjuda);
+                            quantidadeAjuda--;
                         }
                         case 3 -> {
                             System.out.println("Com os poderes de sua varinha mágica, você invoca o MateMago!");
                             explicacaoaMago(quantidadeAjuda);
-                            
+                            quantidadeAjuda--;
                         }
                         default -> System.out.println("Terra desconhecida.");
                     }
