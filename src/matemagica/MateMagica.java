@@ -1117,9 +1117,30 @@ public class MateMagica<T, U> {
 
     static void explicacaoaMago(int quantidadeAjuda) {
         if (quantidadeAjuda == 2) {
-            System.out.println("Primeira Ajuda Mago");
+            System.out.println("""
+                Mago: "Ah, jovem aventureiro de Númeria! Percebo que você enfrenta uma equação de segundo grau. Deixe-me oferecer algumas orientações místicas:
+                
+                - Primeiro, certifique-se de que sua equação está na forma padrão 'ax² + bx + c = 0'.
+
+                - Identifique os coeficientes 'a', 'b' e 'c'. Eles serão cruciais para os próximos passos."
+
+                - "Agora, com o conhecimento necessário, siga adiante! Lembre-se, só poderá me chamar mais uma vez nesta jornada!"
+
+            """);
         } else if (quantidadeAjuda == 1) {
-            System.out.println("Segunda Ajuda Mago");
+            System.out.println("""
+                Mago: "Ah, vejo que você está de volta, jovem aventureiro de Númeria! Aqui estão mais algumas dicas para resolver sua equação de segundo grau:
+
+                - Utilize a fórmula quadrática: 'x = (-b ± raiz quadrada(b² - 4ac)) / (2a)'. Esta fórmula é sua ferramenta mágica para encontrar as raízes da equação.
+                
+                - Calcule o discriminante 'D = b² - 4ac'. Ele determinará a natureza das raízes:
+
+                - Se 'D' for maior que 0, você terá duas raízes reais e distintas.
+                - Se 'D' for igual a 0, você terá uma raiz real dupla.
+                - Se 'D' for menor que 0, as raízes serão complexas e conjugadas."
+                
+                 Que a magia das equações esteja com você, bravo aventureiro! Vá e resolva com confiança!
+            """);
         }
     }
 
