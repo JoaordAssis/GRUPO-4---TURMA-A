@@ -13,6 +13,8 @@ public class MateMagica<T, U> {
     static int pontuacao;
     static int quantidadeAjuda;
     static int terra;
+    static boolean verificador = true;
+    static char resp = ' ';
 
     
     
@@ -102,12 +104,12 @@ public class MateMagica<T, U> {
 						|      <|  -__||  _  ||   _||  _  ||__ --|
 						|___|__||_____||__|__||__|  |___._||_____|
  
-						1- Objetivo: O objetivo principal do jogo é ajudar Numeria, a aprendiz de Matemágica, a recuperar os Cristais Numéricos roubados por Ignorantus, restaurando assim a ordem e a harmonia em Matemágica.\\n
-						2- Pontuação e Progressão: O jogador avança pelo jogo completando desafios matemáticos em cada fase para ganhar pontos. Os mesmos são essenciais para progredir e desbloquear novas áreas do reino de Matemágica. \\n   O jogador precisa acumular uma pontuação mínima em cada fase para avançar para a próxima.\\n
-						3- Desafios Matemáticos: Cada fase apresenta uma série de desafios matemáticos que o jogador deve resolver para ganhar pontos.\\n   Os desafios podem variar em dificuldade e tipo, incluindo Padrões, Equações de primeiro grau e segundo grau.\\n
-						4- Aliados e Poderes Especiais: Durante a jornada, Numeria encontra aliados mágicos, como o sábio calculador e a fada dos números. \\n   Esses aliados oferecem dicas e poderes especiais que podem ajudar o jogador a resolver desafios mais difíceis ou superar obstáculos.\\n
-						5- Perda e Recomeço: Se o jogador não conseguir alcançar a pontuação mínima em uma fase, ele perde e deve recomeçar a fase desde o início. \\n   No entanto, o jogador pode usar as experiências passadas para melhorar seu desempenho e resolver os desafios com mais eficiência.\\n
-						6- Confronto Final: Após completar todas as fases e recuperar todos os Cristais Numéricos, o jogador enfrenta Ignorantus no confronto final. \\n   Neste momento, Numeria usa todo o conhecimento matemático adquirido ao longo da jornada para derrotar o vilão e restaurar os Cristais às Torres da Sabedoria.\\n""");
+						1- Objetivo: O objetivo principal do jogo é ajudar Numeria, a aprendiz de Matemágica, a recuperar os Cristais Numéricos roubados por Ignorantus, restaurando assim a ordem e a harmonia em Matemágica.\n
+						2- Pontuação e Progressão: O jogador avança pelo jogo completando desafios matemáticos em cada fase para ganhar pontos. Os mesmos são essenciais para progredir e desbloquear novas áreas do reino de Matemágica. \n   O jogador precisa acumular uma pontuação mínima em cada fase para avançar para a próxima.\n
+						3- Desafios Matemáticos: Cada fase apresenta uma série de desafios matemáticos que o jogador deve resolver para ganhar pontos.\n   Os desafios podem variar em dificuldade e tipo, incluindo Padrões, Equações de primeiro grau e segundo grau.\n
+						4- Aliados e Poderes Especiais: Durante a jornada, Numeria encontra aliados mágicos, como o sábio calculador e a fada dos números. \n   Esses aliados oferecem dicas e poderes especiais que podem ajudar o jogador a resolver desafios mais difíceis ou superar obstáculos.\n
+						5- Perda e Recomeço: Se o jogador não conseguir alcançar a pontuação mínima em uma fase, ele perde e deve recomeçar a fase desde o início. \n   No entanto, o jogador pode usar as experiências passadas para melhorar seu desempenho e resolver os desafios com mais eficiência.\n
+						6- Confronto Final: Após completar todas as fases e recuperar todos os Cristais Numéricos, o jogador enfrenta Ignorantus no confronto final. \n   Neste momento, Numeria usa todo o conhecimento matemático adquirido ao longo da jornada para derrotar o vilão e restaurar os Cristais às Torres da Sabedoria.\n""");
     }
 
     static void exibirCreditos() {
@@ -126,7 +128,7 @@ public class MateMagica<T, U> {
     }
 
     static void jogar() {
-        System.out.println("Iniciando em 3 segundos...");
+         System.out.println("Iniciando em 3 segundos...");
     	 delay(3);
          System.out.println("Bem-vindo(a) ao Reino de Matemágica!");
          delay(2);
@@ -379,11 +381,23 @@ public class MateMagica<T, U> {
             System.out.println("====================================================");
 
             ajuda();
+            
+            boolean verificador;
+            char alternativaCorreta;
+            
+            do{
+                verificador = true;
+                System.out.println("Digite a alternativa:");
+                char alternativa = input.next().charAt(0);
+                resp = Character.toLowerCase(alternativa);
+                alternativaCorreta = respostaCorreta.charAt(0);
 
-            System.out.println("Digite a alternativa:");
-            char resp = input.next().charAt(0);
-
-            char alternativaCorreta = respostaCorreta.charAt(0);
+                if(resp != 'a' && resp != 'b' && resp != 'c' && resp != 'd' && resp != 'e'){
+                    System.out.println("Alternativa invalida");
+                    verificador = false;
+                }
+            }while(verificador == false);
+            
             if (resp == alternativaCorreta) {
 
                 System.out.println("\n\n\n\n Resposta correta!!! \n\n\n\n");
@@ -409,12 +423,14 @@ public class MateMagica<T, U> {
             System.out.println("\n\nInfelizmente você não atingiu a pontuação mínima para seguir caminho para a proxima terra.\nVocê atingiu " + pontuacao
                     + " pontos de energia. Que tal reiniciar o percuso e tentar novamente?! \n\n\n");
                     delay(4);
+            pontuacao = 0;        
             terraPadroes();
         } else {
             System.out.println(
                     "\n\nWOW! Você foi incrível, se prepare a proxima fase é terra da equacao de primeiro grau, e dizem que as coisas por lá são ainda mais sombrias..\n");
                     delay(2);
             terraEquacaoPrimeiroGrau();
+            
         }
         input.close();
     }
@@ -422,59 +438,59 @@ public class MateMagica<T, U> {
     
      // Introdução a Terra de Equações do Primeiro Grau
     static void terraEquacaoPrimeiroGrau() {     
-        System.out.println("Enquanto Númeria avança em direção à próxima terra, ela se depara com uma pequena vila, mas algo parece estranho...");
+        System.out.println("Enquanto Númeria avança em direção à próxima terra, ela se depara com uma pequena vila, mas algo parece estranho...\n");
         delay(1);
 
-        System.out.println("Númeria: Hmm, essa vila está um tanto sombria. Será que alguém pode me ajudar aqui?");
+        System.out.println("Númeria: Hmm, essa vila está um tanto sombria. Será que alguém pode me ajudar aqui?\n");
         delay(1);
 
-        System.out.println("** Barulho de algo se mexendo **");
+        System.out.println("** Barulho de algo se mexendo **\n");
         delay(1);
-        System.out.println("Elfo Númerix: Quem está aí?! O que você quer aqui na minha vila?");
+        System.out.println("Elfo Númerix: Quem está aí?! O que você quer aqui na minha vila?\n");
         delay(1);
-        System.out.println("Númeria, cautelosa, responde:");
+        System.out.println("Númeria, cautelosa, responde:\n");
         delay(1);
-        System.out.println("Númeria: Desculpe-me incomodá-lo, senhor Elfo. Sou Númeria, uma aprendiz de Matemágica. Estou em uma missão para recuperar os cristais matemágicos roubados por Ignorantus.");
+        System.out.println("Númeria: Desculpe-me incomodá-lo, senhor Elfo. Sou Númeria, uma aprendiz de Matemágica. Estou em uma missão para recuperar os cristais matemágicos roubados por Ignorantus.\n");
         delay(3);
 
-        System.out.println("Elfo Númerix, desconfiado, cruza os braços e olha fixamente para Númeria.");
+        System.out.println("Elfo Númerix, desconfiado, cruza os braços e olha fixamente para Númeria.\n");
         delay(2);
 
-        System.out.println("Elfo Númerix: Hmpf, Matemágica, hein? Como posso ter certeza de que você não é uma espiã de Ignorantus?");
+        System.out.println("Elfo Númerix: Hmpf, Matemágica, hein? Como posso ter certeza de que você não é uma espiã de Ignorantus?\n");
         delay(1);
-        System.out.println("Elfo Númerix: Responda-me uma coisa, então. O que é mais importante para você?");
+        System.out.println("Elfo Númerix: Responda-me uma coisa, então. O que é mais importante para você?\n");
         delay(2);
 
-        System.out.println("Númeria: (Pensativa) Bem, deixe-me ver... (1) Restaurar a harmonia em Matemágica. (2) Derrotar Ignorantus. (3) Aprender mais sobre os mistérios da matemática.");
+        System.out.println("Númeria: (Pensativa) Bem, deixe-me ver... (1) Restaurar a harmonia em Matemágica. (2) Derrotar Ignorantus. (3) Aprender mais sobre os mistérios da matemática.\n");
         delay(1);
 
         Scanner input = new Scanner(System.in);
         int resposta = input.nextInt();
 
         switch (resposta) {
-            case 1 -> System.out.println("Númeria: O que mais importa para mim é restaurar a harmonia em Matemágica.");
-            case 2 -> System.out.println("Númeria: O mais importante para mim é derrotar Ignorantus e salvar Matemágica.");
-            case 3 -> System.out.println("Númeria: Eu desejo aprender mais sobre os mistérios da matemática.");
-            default -> System.out.println("Númeria: Desculpe, eu não entendi sua pergunta. Posso tentar responder novamente?");
+            case 1 -> System.out.println("Númeria: O que mais importa para mim é restaurar a harmonia em Matemágica.\n");
+            case 2 -> System.out.println("Númeria: O mais importante para mim é derrotar Ignorantus e salvar Matemágica.\n");
+            case 3 -> System.out.println("Númeria: Eu desejo aprender mais sobre os mistérios da matemática.\n");
+            default -> System.out.println("Númeria: Desculpe, eu não entendi sua pergunta. Posso tentar responder novamente?\n");
         }
         delay(2);
 
-        System.out.println("Elfo Númerix: Hm, parece que você não é uma espiã de Ignorantus afinal.");
+        System.out.println("Elfo Númerix: Hm, parece que você não é uma espiã de Ignorantus afinal.\n");
         delay(1);
         
-        System.out.println("Elfo Númerix: Bem, seja como for, a próxima terra que você está prestes a enfrentar é a Terra das Equações do Primeiro Grau.");
+        System.out.println("Elfo Númerix: Bem, seja como for, a próxima terra que você está prestes a enfrentar é a Terra das Equações do Primeiro Grau.\n");
         delay(3);
 
-        System.out.println("Elfo Númerix: Antes de partir, deixe-me adiantar oque vem a seguir.. equações de primeiro grau.");
+        System.out.println("Elfo Númerix: Antes de partir, deixe-me adiantar oque vem a seguir.. equações de primeiro grau.\n");
         delay(1);
         
-        System.out.println("Elfo Númerix: As equações de primeiro grau são expressões matemáticas que envolvem uma incógnita (geralmente representada por 'x') e podem ser resolvidas para encontrar o valor dessa incógnita.");
+        System.out.println("Elfo Númerix: As equações de primeiro grau são expressões matemáticas que envolvem uma incógnita (geralmente representada por 'x') e podem ser resolvidas para encontrar o valor dessa incógnita.\n");
         delay(3);
 
-        System.out.println("Elfo Númerix: Por exemplo, uma equação simples de primeiro grau seria '2x + 3 = 9'. Aqui, o objetivo é encontrar o valor de 'x' que torna a equação verdadeira.");
+        System.out.println("Elfo Númerix: Por exemplo, uma equação simples de primeiro grau seria '2x + 3 = 9'. Aqui, o objetivo é encontrar o valor de 'x' que torna a equação verdadeira.\n");
         delay(2);
         
-        System.out.println("Elfo Númerix: Isso significa que 2 vezes um número desconhecido somado a 3 será igual a nove.");
+        System.out.println("Elfo Númerix: Isso significa que 2 vezes um número desconhecido somado a 3 será igual a nove.\n");
         delay(1);
         
         System.out.println("Númeria: Como assim? Número desconhecido?\n");
@@ -519,7 +535,7 @@ public class MateMagica<T, U> {
         System.out.println("Númeria: Muito obrigada, Elfo Númerix! Estou ansiosa para enfrantar os desafios que virão!.\n");
         delay(2);
 
-        System.out.println("Ao chegar na terra de Equações do primerio grau Númeria se depara com o primeiro desafio.");
+        System.out.println("Ao chegar na terra de Equações do primerio grau Númeria se depara com o primeiro desafio.\n");
         delay(2);
 
         //inicia array que contem questões da terra de quações do primeiro grau.
@@ -603,10 +619,22 @@ public class MateMagica<T, U> {
 
             ajuda();
 
-            System.out.println("Digite a alternativa:");
-            char resp = input.next().charAt(0);
+            boolean verificador;
+            char alternativaCorreta;
+            
+            do{
+                verificador = true;
+                System.out.println("Digite a alternativa:");
+                char alternativa = input.next().charAt(0);
+                resp = Character.toLowerCase(alternativa);
+                alternativaCorreta = respostaCorreta.charAt(0);
 
-            char alternativaCorreta = respostaCorreta.charAt(0);
+                if(resp != 'a' && resp != 'b' && resp != 'c' && resp != 'd' && resp != 'e'){
+                    System.out.println("Alternativa invalida");
+                    verificador = false;
+                }
+            }while(verificador == false);
+            
             if (resp == alternativaCorreta) {
                 System.out.println("\n\n\nResposta correta!!!\n\n\n");
                 pontuacao = 200 + pontuacao;
@@ -810,12 +838,24 @@ public class MateMagica<T, U> {
         
             ajuda();
         
-            System.out.println("Digite a alternativa:");
-            char resp = input.next().charAt(0);
+            boolean verificador;
+            char alternativaCorreta;
+            
+            do{
+                verificador = true;
+                System.out.println("Digite a alternativa:");
+                char alternativa = input.next().charAt(0);
+                resp = Character.toLowerCase(alternativa);
+                alternativaCorreta = respostaCorreta.charAt(0);
+
+                if(resp != 'a' && resp != 'b' && resp != 'c' && resp != 'd' && resp != 'e'){
+                    System.out.println("Alternativa invalida");
+                    verificador = false;
+                }
+            }while(verificador == false);
         
             System.out.println("====================================================");
         
-            char alternativaCorreta = respostaCorreta.charAt(0);
             if (resp == alternativaCorreta) {
                 System.out.println("\n\n\n\nResposta correta!!!\n\n\n\n");
                 pontuacao = 200 + pontuacao;
@@ -923,32 +963,31 @@ public class MateMagica<T, U> {
         questoesFinais.add("""
             Determine quais são as raízes da equação x^2 - 5x + 6 = 0:
 
-            a)s={2,3}S={2,3}
-            b)s={-2,3}S={-2,3}
-            c)s={1,6}S={1,6}
-            d)s={-1,6}S={-1,6}
-            e)s={1,5}S={1,5}
+            a)s={2,3}
+            b)s={-2,3}
+            c)s={1,6}
+            d)s={-1,6}
+            e)s={1,5}
 
 				""");
 
         questoesFinais.add("""
             Escolha qual das alternativas correspondem aos coeficientes a, b e c da equação 2 x^2  -  4x - 6 = 0
 
-            a) a=1,b=2,c=-3a=1,b=2,c=-3
-            b) b=2,b=-4,c=-6a=2,b=-4,c=-6
-            c) c=3,b=-4,c=-2a=3,b=-4,c=-2
-            d) d=2,b=4,c=6a=2,b=4,c=6
-            e) e=1,b=4,c=-6a=1,b=4,c=-6:
-
+            a)𝑎=1, 𝑏=2, 𝑐=−3
+            b)𝑎= 2, 𝑏= −4, 𝑐= −6
+            c)𝑎= 3, 𝑏= −4, 𝑐= −2
+            d)𝑎= 2, 𝑏= 4, 𝑐= 6               
+            e)𝑎= 1. 𝑏= 4, 𝑐= −6               
 
 				""");
         ArrayList<String> respostasFinal = new ArrayList<>();
-        respostasFinal.add("c) 3.p+1 & 14");
+        respostasFinal.add("d) 2.p+3 & 21");
         respostasFinal.add("a) 37");
         respostasFinal.add("a) 6");
-        respostasFinal.add("e) 13");
-        respostasFinal.add("a) s = { 2 , 3 } S={2,3}");
-        respostasFinal.add("b) b=-4,c=-6a=2,b=-4,c=-6");
+        respostasFinal.add("d) 11");
+        respostasFinal.add("a) s = { 2 , 3 }");
+        respostasFinal.add("b) 𝑎= 2, 𝑏= −4, 𝑐= −6");
         
         List<MateMagica<String, String>> arrayRespostasFinal = new ArrayList<>();
         for (int i = 0; i < questoesFinais.size(); i++) {
@@ -957,22 +996,38 @@ public class MateMagica<T, U> {
 
         Collections.shuffle(arrayRespostasFinal);
 
-        for (int i = 0; i <= 5; i++) {
+        for (int i = 0; i < 3; i++) {
             MateMagica<String, String> arrayRespostaFinal = arrayRespostasFinal.get(i);
             String questao = arrayRespostaFinal.getFirst();
             String respostaCorreta = arrayRespostaFinal.getSecond();
 
             System.out.println(questao);
 
-            System.out.println("Digite a alternativa:");
-            char resp = input.next().charAt(0);
+            boolean verificador;
+            char alternativaCorreta;
+            
+            do{
+                verificador = true;
+                System.out.println("Digite a alternativa:");
+                char alternativa = input.next().charAt(0);
+                resp = Character.toLowerCase(alternativa);
+                alternativaCorreta = respostaCorreta.charAt(0);
 
-            char alternativaCorreta = respostaCorreta.charAt(0);
+                if(resp != 'a' && resp != 'b' && resp != 'c' && resp != 'd' && resp != 'e'){
+                    System.out.println("Alternativa invalida");
+                    verificador = false;
+                }
+            }while(verificador == false);
+            
             if (resp == alternativaCorreta) {
                 System.out.println("\n\n\n\nResposta correta!!!\n\n\n\n");
                 pontuacao = 200 + pontuacao;
+                System.out.println("Sua varinha mágica está com: " + pontuacao + " pontos de energia\n\n");
+                delay(3);
             } else {
                 System.out.println("Resposta incorreta!! Ignorantus está ganhando mais poder!! Númeria seja forte!!\n\n");
+                System.out.println("Sua varinha mágica está com: " + pontuacao + " pontos de energia\n\n");
+                delay(3);
             }
         }
         
@@ -982,6 +1037,7 @@ public class MateMagica<T, U> {
             delay(10);
             terraEquacaoSegundoGrau();
         } else {
+            System.out.println("Sua pontuação final foi: " + pontuacao + ". Parabéns!");
             fimJogo();
         }
         input.close();
@@ -1177,8 +1233,6 @@ public class MateMagica<T, U> {
         delay(5);
         System.out.println("E assim, Matemágica floresce mais uma vez, banhada pela luz da coragem e do conhecimento, graças à bravura e à determinação de Numeria, a Grande Matemaga.");
         delay(6);
-
-        System.out.println("Obrigado por jogar!");
 
         System.out.println("""
 
